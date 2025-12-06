@@ -13,7 +13,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl md:text-2xl font-serif font-light tracking-wide text-foreground">Lumière Beauté</h1>
+            <h1 className="text-xl md:text-2xl font-serif font-light tracking-wide text-foreground">Juliskin</h1>
           </div>
 
           {/* Desktop Navigation */}

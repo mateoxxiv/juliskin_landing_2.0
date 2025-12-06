@@ -11,8 +11,8 @@
   --card-foreground: oklch(0.25 0.01 85);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.25 0.01 85);
-  --primary: oklch(0.35 0.02 75);
-  --primary-foreground: oklch(0.98 0.01 85);
+  --primary: hsla(200, 65%, 86%, 1);
+  --primary-foreground: hsla(200, 65%, 10%, 1);
   --secondary: oklch(0.92 0.015 80);
   --secondary-foreground: oklch(0.25 0.01 85);
   --muted: oklch(0.94 0.01 85);
@@ -38,6 +38,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --button-background: hsla(200, 65%, 86%, 1);
+  --button-foreground: hsla(200, 65%, 10%, 1);
 }
 
 .dark {
@@ -121,6 +123,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

@@ -1,17 +1,22 @@
+import Link from "next/link"
+
 const categories = [
   {
     name: "Tratamientos Faciales",
-    description: "Limpieza, hidratación y rejuvenecimiento profesional",
+    slug: "faciales",
+    description: "Revitaliza tu piel con tratamientos avanzados de limpieza, hidratación profunda y rejuvenecimiento.",
     image: "/facial-treatment-category-spa-elegant.jpg",
   },
   {
-    name: "Rejuvenecimiento Avanzado",
-    description: "Tecnología de vanguardia para resultados visibles",
+    name: "Tratamientos Capilares",
+    slug: "capilares",
+    description: "Soluciones innovadoras y tecnología de punta para restaurar la salud y vitalidad de tu cabello.",
     image: "/advanced-rejuvenation-treatment-category.jpg",
   },
   {
     name: "Tratamientos Corporales",
-    description: "Cuidado integral para todo tu cuerpo",
+    slug: "corporales",
+    description: "Experiencias de bienestar integral que esculpen, tonifican y relajan tu cuerpo.",
     image: "/body-treatment-category-spa-luxury.jpg",
   },
 ]
@@ -34,7 +39,11 @@ export function Categories() {
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {categories.map((category, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-lg cursor-pointer">
+            <Link
+              key={index}
+              href={`/categorias/${category.slug}`}
+              className="group relative overflow-hidden rounded-lg cursor-pointer block"
+            >
               {/* Image */}
               <div className="aspect-[4/5] relative">
                 <img
@@ -49,11 +58,11 @@ export function Categories() {
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-white">
                 <h3 className="text-xl md:text-2xl font-serif font-light mb-2 text-balance">{category.name}</h3>
                 <p className="text-sm text-white/90 mb-4 leading-relaxed text-pretty">{category.description}</p>
-                <button className="text-sm font-medium uppercase tracking-wider border-b border-white/50 hover:border-white transition-colors pb-1">
+                <span className="text-sm font-medium uppercase tracking-wider border-b border-white/50 group-hover:border-white transition-colors pb-1">
                   Explorar
-                </button>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

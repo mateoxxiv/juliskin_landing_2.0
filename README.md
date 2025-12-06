@@ -32,34 +32,34 @@ Landing page premium para servicios de cosmetología con diseño elegante y mode
 ### Instalación
 
 1. Clona el repositorio:
-\`\`\`bash
+```bash
 git clone https://github.com/tu-usuario/juliskin_landing_2.0.git
 cd juliskin_landing_2.0
-\`\`\`
+```
 
 2. Instala las dependencias:
-\`\`\`bash
+```bash
 npm install
 # o
 yarn install
 # o
 pnpm install
-\`\`\`
+```
 
 3. Ejecuta el servidor de desarrollo:
-\`\`\`bash
+```bash
 npm run dev
 # o
 yarn dev
 # o
 pnpm dev
-\`\`\`
+```
 
 4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
 ## Estructura de Directorios
 
-\`\`\`
+```
 juliskin_landing_2.0/
 ├── app/                          # App Router de Next.js
 │   ├── layout.tsx               # Layout principal con metadatos SEO
@@ -96,7 +96,7 @@ juliskin_landing_2.0/
 │   └── use-toast.ts
 │
 └── README.md                    # Este archivo
-\`\`\`
+```
 
 ## Convenciones del Proyecto
 
@@ -111,7 +111,7 @@ juliskin_landing_2.0/
 
 #### Componentes
 
-\`\`\`typescript
+```typescript
 // Usar 'use client' solo cuando sea necesario
 'use client'
 
@@ -133,7 +133,7 @@ export function ServiceCard({ service, className }: ServiceCardProps) {
     // JSX aquí
   )
 }
-\`\`\`
+```
 
 #### Estilos con Tailwind
 
@@ -142,13 +142,13 @@ export function ServiceCard({ service, className }: ServiceCardProps) {
 - Usar responsive prefixes: `md:`, `lg:`
 - Agrupar clases relacionadas: `flex items-center justify-between`
 
-\`\`\`tsx
+```tsx
 // Bueno
 <div className="bg-primary text-primary-foreground p-6 md:p-8">
 
 // Evitar
 <div className="bg-[#f5f0e8] text-[#2c2416] p-[24px] md:p-[32px]">
-\`\`\`
+```
 
 #### Gestión de Estado
 
@@ -167,19 +167,19 @@ export function ServiceCard({ service, className }: ServiceCardProps) {
 
 Definidos en `app/globals.css`:
 
-\`\`\`css
+```css
 --primary: 35 25% 50%        /* Marrón cálido */
 --accent: 40 65% 85%          /* Beige claro */
 --accent-gold: 45 75% 65%     /* Dorado suave */
 --foreground: 30 15% 15%      /* Texto oscuro */
 --background: 40 25% 97%      /* Fondo crema */
-\`\`\`
+```
 
 ### Datos de Servicios
 
 Los servicios están centralizados en `lib/services-data.ts`:
 
-\`\`\`typescript
+```typescript
 export interface Service {
   id: string
   title: string
@@ -189,7 +189,7 @@ export interface Service {
   benefits: string[]
   // ... más campos
 }
-\`\`\`
+```
 
 ## Personalización
 
@@ -217,13 +217,13 @@ Este proyecto está configurado para deployment automático en Vercel:
 
 ### Otros Servicios
 
-\`\`\`bash
+```bash
 # Build de producción
 npm run build
 
 # Iniciar servidor de producción
 npm start
-\`\`\`
+```
 
 ## Recursos
 

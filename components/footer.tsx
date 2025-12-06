@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-8">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-serif font-light mb-4">Lumière Beauté</h3>
+            <h3 className="text-xl font-serif font-light mb-4">Juliskin Cosmetología</h3>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               Cosmetología premium que transforma tu belleza natural en resultados extraordinarios.
             </p>
@@ -98,7 +98,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/80">© 2025 Lumière Beauté. Todos los derechos reservados.</p>
+            <p className="text-sm text-primary-foreground/80">© 2025 Juliskin Cosmetología. Todos los derechos reservados.</p>
 
             {/* Social Links */}
             <div className="flex items-center gap-4">

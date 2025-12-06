@@ -3,6 +3,7 @@
 import { Menu, Search, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import { WHATSAPP_URL } from "@/lib/constants"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,13 +19,13 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#servicios" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
+            <a href="/servicios" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
               Servicios
             </a>
             <a href="#tratamientos" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
               Tratamientos
             </a>
-            <a
+            {/* <a
               href="#sobre-nosotros"
               className="text-sm font-medium text-foreground hover:text-accent transition-colors"
             >
@@ -32,18 +33,25 @@ export function Header() {
             </a>
             <a href="#contacto" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
               Contacto
-            </a>
+            </a> */}
           </nav>
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="text-foreground hover:text-accent">
+            {/* <Button variant="ghost" size="icon" className="text-foreground hover:text-accent">
               <Search className="h-5 w-5" />
               <span className="sr-only">Buscar</span>
-            </Button>
-            <Button variant="default" size="sm" className="hidden md:flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              Agendar Cita
+            </Button> */}
+            <Button
+              variant="default"
+              size="sm"
+              className="hidden md:flex items-center gap-2"
+              asChild
+            >
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <Phone className="h-4 w-4" />
+                Agendar Cita
+              </a>
             </Button>
             <Button
               variant="ghost"
@@ -61,7 +69,7 @@ export function Header() {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
-              <a href="#servicios" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
+              <a href="/servicios" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
                 Servicios
               </a>
               <a
@@ -70,18 +78,25 @@ export function Header() {
               >
                 Tratamientos
               </a>
-              <a
+              {/* <a
                 href="#sobre-nosotros"
                 className="text-sm font-medium text-foreground hover:text-accent transition-colors"
               >
                 Nuestra Historia
-              </a>
+              </a> */}
               <a href="#contacto" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
                 Contacto
               </a>
-              <Button variant="default" size="sm" className="flex items-center justify-center gap-2 mt-2">
-                <Phone className="h-4 w-4" />
-                Agendar Cita
+              <Button
+                variant="default"
+                size="sm"
+                className="flex items-center justify-center gap-2 mt-2"
+                asChild
+              >
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <Phone className="h-4 w-4" />
+                  Agendar Cita
+                </a>
               </Button>
             </div>
           </nav>

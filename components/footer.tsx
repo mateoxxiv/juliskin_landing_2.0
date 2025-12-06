@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Youtube } from "lucide-react"
+import { WHATSAPP_URL } from "@/lib/constants"
 
 export function Footer() {
   return (
@@ -18,34 +19,39 @@ export function Footer() {
             <h4 className="font-medium mb-4 uppercase text-sm tracking-wider">Servicios</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Tratamientos faciales
+                <a href="/categorias/faciales" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Tratamientos Faciales
                 </a>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Rejuvenecimiento
+                <a href="/categorias/capilares" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Tratamientos Capilares
                 </a>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Tratamientos corporales
+                <a href="/categorias/corporales" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Tratamientos Corporales
                 </a>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Paquetes especiales
+                <a href="/servicios" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Todos los Servicios
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Customer Service */}
-          <div>
+          {/* <div>
             <h4 className="font-medium mb-4 uppercase text-sm tracking-wider">Ayuda</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
                   Agendar cita
                 </a>
               </li>
@@ -65,33 +71,25 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* About */}
           <div>
-            <h4 className="font-medium mb-4 uppercase text-sm tracking-wider">Sobre nosotros</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Nuestra historia
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Nuestro equipo
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Certificaciones
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Blog de belleza
-                </a>
-              </li>
-            </ul>
+            <h4 className="font-medium mb-4 uppercase text-sm tracking-wider">Ubicación</h4>
+            <div className="text-sm text-primary-foreground/80 leading-relaxed">
+              <p className="font-medium text-primary-foreground mb-2">Dirección:</p>
+              <a
+                href="https://maps.google.com/?q=Mall+portal+de,+Cra.+54A+%2375+Sur+13,+Portal+de+Ditaires,+La+Estrella,+Itagüi,+Antioquia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary-foreground transition-colors"
+              >
+                Mall Portal de Ditaires<br />
+                Cra. 54A #75 Sur 13<br />
+                La Estrella, Itagüí<br />
+                Antioquia, Colombia
+              </a>
+            </div>
           </div>
         </div>
 

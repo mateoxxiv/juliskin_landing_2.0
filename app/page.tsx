@@ -14,7 +14,7 @@ export default function Home() {
       <FeaturedServices />
       <Categories />
       <Testimonials />
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Footer />
     </main>
   )

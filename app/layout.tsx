@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Cormorant_Garamond } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { LoadingProvider } from "@/components/loading-provider"
 import "./globals.css"
 
 const geist = Geist({
@@ -16,14 +17,14 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "Lumière Beauté | Cosmetología Premium y Productos de Lujo",
+  title: "Juliskin | Cosmetología Premium - Tratamientos Faciales, Capilares y Corporales",
   description:
-    "Descubre la excelencia en cosmetología. Productos innovadores que transforman tu piel con ingredientes científicamente probados. Belleza natural, resultados extraordinarios.",
+    "Centro de cosmetología premium en Colombia. Tratamientos faciales con Hydrafacial, peeling químico, microdermoabrasión. Tratamientos capilares para caída del cabello. Aclaramiento corporal de axilas y bikini. Resultados visibles desde la primera sesión.",
   keywords:
-    "cosmetología, productos de belleza, cuidado de la piel, tratamientos faciales, belleza premium, skincare, cosméticos de lujo",
+    "juliskin, cosmetología, tratamientos faciales, hydrafacial, limpieza facial profunda, peeling químico, microdermoabrasión, tratamiento caída del cabello, crecimiento capilar, aclaramiento axilas, aclaramiento bikini, microagujas, plasma prp, alta hidratación, facial personalizado, tratamientos corporales, skincare Colombia, belleza premium, cuidado de la piel",
   openGraph: {
-    title: "Lumière Beauté | Cosmetología Premium",
-    description: "Belleza natural, resultados extraordinarios",
+    title: "Juliskin | Cosmetología Premium - Hydrafacial, Tratamientos Faciales y Capilares",
+    description: "Tratamientos especializados: Hydrafacial, limpieza facial, peeling químico, crecimiento capilar, aclaramiento corporal. Tecnología avanzada y resultados comprobados.",
     type: "website",
   },
   icons: {
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
-    generator: 'v0.app'
+  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -54,7 +55,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${geist.variable} ${cormorant.variable} font-sans antialiased`}>
-        {children}
+        <LoadingProvider>
+          {children}
+        </LoadingProvider>
         <Analytics />
       </body>
     </html>

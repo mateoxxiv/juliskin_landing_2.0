@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { services } from "@/lib/services-data"
+import { WHATSAPP_URL } from "@/lib/constants"
 import { ArrowLeft, Clock, CheckCircle2, Sparkles } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { BackButton } from "@/components/back-button"
 import type { Metadata } from "next"
 
 interface ServiceDetailPageProps {
@@ -49,13 +51,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
 
         <div className="absolute inset-0 flex items-end">
           <div className="container mx-auto px-4 md:px-6 lg:px-8 pb-12 md:pb-16">
-            <Link
-              href="/#servicios"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Volver a servicios
-            </Link>
+            <BackButton fallbackUrl="/servicios" className="mb-6" />
 
             <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-3">{service.category}</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light text-foreground mb-4 text-balance">
@@ -150,8 +146,14 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                 <div className="bg-primary text-primary-foreground rounded-lg p-6 text-center">
                   <p className="text-sm mb-2 opacity-90">Precio desde</p>
                   <p className="text-3xl font-serif mb-4">${service.price.toLocaleString("es-CO")}</p>
-                  <Button size="lg" className="w-full bg-background text-foreground hover:bg-background/90">
-                    Agendar Cita
+                  <Button
+                    size="lg"
+                    className="w-full bg-background text-foreground hover:bg-background/90"
+                    asChild
+                  >
+                    <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                      Agendar Cita
+                    </a>
                   </Button>
                 </div>
               </div>

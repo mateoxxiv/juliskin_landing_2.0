@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Clock, Sparkles } from "lucide-react"
-import Link from "next/link"
+import { LoadingLink } from "@/components/loading-link"
 
 interface Service {
   id: number
@@ -22,7 +22,7 @@ interface ServiceCardProps {
 
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <Link href={`/servicios/${service.id}`} className="group cursor-pointer block">
+    <LoadingLink href={`/servicios/${service.id}`} className="group cursor-pointer block">
       {/* Image Container */}
       <div className="relative aspect-[4/5] mb-4 overflow-hidden rounded-lg bg-secondary">
         <img
@@ -68,6 +68,6 @@ export function ServiceCard({ service }: ServiceCardProps) {
 
         <p className="text-lg font-serif text-foreground pt-1">Desde ${service.price.toLocaleString("es-CO")}</p>
       </div>
-    </Link>
+    </LoadingLink>
   )
 }

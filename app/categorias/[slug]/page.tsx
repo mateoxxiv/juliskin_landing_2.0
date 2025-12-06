@@ -1,10 +1,12 @@
 import { CategoryHero } from "@/components/category-hero"
 import { ServiceCard } from "@/components/service-card"
 import { getServicesByCategory, getCategoryInfo } from "@/lib/services-data"
+import { WHATSAPP_URL } from "@/lib/constants"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, Sparkles, Award, Clock, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { BackButton } from "@/components/back-button"
 
 interface CategoryPageProps {
     params: Promise<{
@@ -103,12 +105,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
             {/* Back Button */}
             <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
-                <Link href="/#tratamientos">
-                    <Button variant="ghost" className="gap-2">
-                        <ArrowLeft className="h-4 w-4" />
-                        Volver a categorías
-                    </Button>
-                </Link>
+                <BackButton fallbackUrl="/#tratamientos" />
             </div>
 
             {/* Category Description */}
@@ -188,8 +185,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                         <p className="text-muted-foreground mb-8 leading-relaxed">
                             Agenda tu cita hoy y descubre el poder de nuestros tratamientos especializados
                         </p>
-                        <Button size="lg" className="gap-2">
-                            Agendar Cita
+                        <Button size="lg" className="gap-2" asChild>
+                            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                                Agendar Cita
+                            </a>
                         </Button>
                     </div>
                 </div>

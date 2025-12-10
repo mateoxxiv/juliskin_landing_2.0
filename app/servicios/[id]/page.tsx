@@ -62,7 +62,9 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                 <Clock className="h-5 w-5 text-accent" />
                 <span>{service.duration}</span>
               </div>
-              <div className="text-2xl font-serif text-foreground">Desde ${service.price.toLocaleString("es-CO")}</div>
+              <div className="text-2xl font-serif text-foreground">
+                {service.price === 0 ? "Consultar tarifas" : `Desde $${service.price.toLocaleString("es-CO")}`}
+              </div>
             </div>
           </div>
         </div>
@@ -144,8 +146,10 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
 
                 {/* CTA */}
                 <div className="bg-primary text-primary-foreground rounded-lg p-6 text-center">
-                  <p className="text-sm mb-2 opacity-90">Precio desde</p>
-                  <p className="text-3xl font-serif mb-4">${service.price.toLocaleString("es-CO")}</p>
+                  {service.price > 0 && <p className="text-sm mb-2 opacity-90">Precio desde</p>}
+                  <p className="text-3xl font-serif mb-4">
+                    {service.price === 0 ? "Consultar tarifas" : `$${service.price.toLocaleString("es-CO")}`}
+                  </p>
                   <Button
                     size="lg"
                     className="w-full bg-background text-foreground hover:bg-background/90"
@@ -196,7 +200,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                       {relatedService.shortDescription || relatedService.description}
                     </p>
                     <p className="text-lg font-serif text-foreground">
-                      Desde ${relatedService.price.toLocaleString("es-CO")}
+                      {relatedService.price === 0 ? "Consultar tarifas" : `Desde $${relatedService.price.toLocaleString("es-CO")}`}
                     </p>
                   </div>
                 </Link>

@@ -1,5 +1,7 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { WHATSAPP_URL } from "@/lib/constants"
 
 export function Hero() {
   return (
@@ -19,26 +21,31 @@ export function Hero() {
         <p className="text-sm md:text-base tracking-[0.3em] uppercase text-muted-foreground mb-6 md:mb-8">
           Experiencia Premium
         </p>
-        <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light text-foreground mb-6 md:mb-8 leading-tight text-balance">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light text-foreground mb-6 md:mb-8 leading-tight text-balance">
           {"Renueva tu piel,"}
           <br />
           {"transforma tu belleza"}
-        </h2>
+        </h1>
         <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed text-pretty">
           Tratamientos cosmetológicos innovadores que realzan tu belleza natural. Tecnología de vanguardia combinada con
           técnicas especializadas para resultados visibles y duraderos.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 min-w-[200px]">
-            Ver Tratamientos
-            <ArrowRight className="ml-2 h-4 w-4" />
+          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 min-w-[200px]" asChild>
+            <Link href="/servicios">
+              Ver Tratamientos
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="border-primary text-foreground hover:bg-secondary min-w-[200px] bg-transparent"
+            asChild
           >
-            Agendar Consulta
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              Agendar Consulta
+            </a>
           </Button>
         </div>
       </div>

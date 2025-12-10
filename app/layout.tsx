@@ -17,15 +17,24 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "Juliskin | Cosmetología Premium - Tratamientos Faciales, Capilares y Corporales",
+  metadataBase: new URL("https://juliskin.com"), // Reemplazar con tu dominio real cuando lo tengas
+  title: {
+    default: "Juliskin | Cosmetología Premium - Tratamientos Faciales y Corporales",
+    template: "%s | Juliskin Cosmetología",
+  },
   description:
-    "Centro de cosmetología premium en Colombia. Tratamientos faciales con Hydrafacial, peeling químico, microdermoabrasión. Tratamientos capilares para caída del cabello. Aclaramiento corporal de axilas y bikini. Resultados visibles desde la primera sesión.",
+    "Centro de cosmetología premium en Colombia. Tratamientos faciales con Hydrafacial, peeling químico, microdermoabrasión. Tratamientos capilares y cursos profesionales.",
   keywords:
-    "juliskin, cosmetología, tratamientos faciales, hydrafacial, limpieza facial profunda, peeling químico, microdermoabrasión, tratamiento caída del cabello, crecimiento capilar, aclaramiento axilas, aclaramiento bikini, microagujas, plasma prp, alta hidratación, facial personalizado, tratamientos corporales, skincare Colombia, belleza premium, cuidado de la piel",
+    "juliskin, cosmetología, tratamientos faciales, hydrafacial, cursos de estetica, limpieza facial, peeling, bogota, colombia",
   openGraph: {
-    title: "Juliskin | Cosmetología Premium - Hydrafacial, Tratamientos Faciales y Capilares",
-    description: "Tratamientos especializados: Hydrafacial, limpieza facial, peeling químico, crecimiento capilar, aclaramiento corporal. Tecnología avanzada y resultados comprobados.",
+    title: {
+      default: "Juliskin | Cosmetología Premium",
+      template: "%s | Juliskin",
+    },
+    description: "Tratamientos especializados y cursos profesionales de estética. Tecnología avanzada y resultados comprobados.",
     type: "website",
+    siteName: "Juliskin",
+    locale: "es_CO",
   },
   icons: {
     icon: [

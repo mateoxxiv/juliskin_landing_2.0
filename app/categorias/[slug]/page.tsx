@@ -113,7 +113,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 <div className="container mx-auto px-4 md:px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto text-center">
                         <h2 className="text-2xl md:text-3xl font-serif font-light text-foreground mb-6">
-                            Descubre nuestros tratamientos
+                            Conocimiento innovador en estética facial y corporal
                         </h2>
                         <p className="text-muted-foreground leading-relaxed text-pretty">
                             {categoryInfo.longDescription}

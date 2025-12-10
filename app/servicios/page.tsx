@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect, useRef } from "react"
 import { ServiceCard } from "@/components/service-card"
 import { services } from "@/lib/services-data"
 import { Search } from "lucide-react"
@@ -9,12 +9,31 @@ import { Button } from "@/components/ui/button"
 export default function ServiciosPage() {
     const [searchQuery, setSearchQuery] = useState("")
     const [selectedCategory, setSelectedCategory] = useState<string>("all")
+    const [isVisible, setIsVisible] = useState(true)
+    const lastScrollY = useRef(0)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY
+
+            if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+                setIsVisible(false)
+            } else {
+                setIsVisible(true)
+            }
+            lastScrollY.current = currentScrollY
+        }
+
+        window.addEventListener("scroll", handleScroll, { passive: true })
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
     const categories = [
         { slug: "all", name: "Todos los Servicios" },
         { slug: "faciales", name: "Tratamientos Faciales" },
         { slug: "capilares", name: "Tratamientos Capilares" },
         { slug: "corporales", name: "Tratamientos Corporales" },
+        { slug: "cursos", name: "Cursos" },
     ]
 
     // Filtrar servicios
@@ -54,9 +73,12 @@ export default function ServiciosPage() {
             </section>
 
             {/* Filters Section */}
-            <section className="py-8 border-b border-border bg-background sticky top-0 z-10 shadow-sm">
+            <section
+                className={`py-4 md:py-8 border-b border-border bg-background sticky top-16 md:top-20 z-40 shadow-sm transition-all duration-300 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
+                    }`}
+            >
                 <div className="container mx-auto px-4 md:px-6 lg:px-8">
-                    <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+                    <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 items-center justify-between">
                         {/* Search Bar */}
                         <div className="relative w-full lg:w-96">
                             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
@@ -70,14 +92,14 @@ export default function ServiciosPage() {
                         </div>
 
                         {/* Category Filters */}
-                        <div className="flex flex-wrap gap-2 justify-center lg:justify-end">
+                        <div className="flex gap-2 w-full lg:w-auto overflow-x-auto pb-2 -mb-2 lg:pb-0 lg:mb-0 lg:flex-wrap lg:justify-end no-scrollbar mask-linear-fade">
                             {categories.map((category) => (
                                 <Button
                                     key={category.slug}
                                     variant={selectedCategory === category.slug ? "default" : "outline"}
                                     size="sm"
                                     onClick={() => setSelectedCategory(category.slug)}
-                                    className="transition-all"
+                                    className="transition-all whitespace-nowrap flex-shrink-0"
                                 >
                                     {category.name}
                                 </Button>
@@ -86,7 +108,7 @@ export default function ServiciosPage() {
                     </div>
 
                     {/* Results Count */}
-                    <div className="mt-4 text-center lg:text-left">
+                    <div className="mt-4 text-center lg:text-left hidden md:block">
                         <p className="text-sm text-muted-foreground">
                             Mostrando <span className="font-medium text-foreground">{filteredServices.length}</span> de{" "}
                             <span className="font-medium text-foreground">{services.length}</span> servicios

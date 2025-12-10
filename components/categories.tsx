@@ -5,19 +5,19 @@ const categories = [
     name: "Tratamientos Faciales",
     slug: "faciales",
     description: "Revitaliza tu piel con tratamientos avanzados de limpieza, hidratación profunda y rejuvenecimiento.",
-    image: "/facial-treatment-category-spa-elegant.jpg",
+    image: "/treatment_facial.jpeg",
   },
   {
     name: "Tratamientos Capilares",
     slug: "capilares",
     description: "Soluciones innovadoras y tecnología de punta para restaurar la salud y vitalidad de tu cabello.",
-    image: "/advanced-rejuvenation-treatment-category.jpg",
+    image: "https://i.ibb.co/nNWvV0nM/capilar2.jpg",
   },
   {
     name: "Tratamientos Corporales",
     slug: "corporales",
     description: "Experiencias de bienestar integral que esculpen, tonifican y relajan tu cuerpo.",
-    image: "/body-treatment-category-spa-luxury.jpg",
+    image: "https://i.ibb.co/JRf8TpnH/peeling-corporal.png",
   },
 ]
 
@@ -42,23 +42,24 @@ export function Categories() {
             <Link
               key={index}
               href={`/categorias/${category.slug}`}
-              className="group relative overflow-hidden rounded-lg cursor-pointer block"
+              className="group relative block overflow-hidden rounded-lg aspect-[3/4] bg-gray-200 shadow-md hover:shadow-xl transition-all duration-300"
+              style={{
+                backgroundImage: `url(${category.image || "/placeholder.svg"})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
             >
-              {/* Image */}
-              <div className="aspect-[4/5] relative">
-                <img
-                  src={category.image || "/placeholder.svg"}
-                  alt={category.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-              </div>
+              {/* Overlay Gradient for readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 pointer-events-none" />
 
-              {/* Content */}
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-white">
+              {/* Content sits on top */}
+              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-white z-10">
                 <h3 className="text-xl md:text-2xl font-serif font-light mb-2 text-balance">{category.name}</h3>
-                <p className="text-sm text-white/90 mb-4 leading-relaxed text-pretty">{category.description}</p>
-                <span className="text-sm font-medium uppercase tracking-wider border-b border-white/50 group-hover:border-white transition-colors pb-1">
+                <p className="text-sm text-white/90 mb-4 leading-relaxed text-pretty text-shadow-sm line-clamp-3">
+                  {category.description}
+                </p>
+                <span className="text-sm font-medium uppercase tracking-wider border-b border-white/50 group-hover:border-white transition-colors pb-1 inline-block mt-2">
                   Explorar
                 </span>
               </div>

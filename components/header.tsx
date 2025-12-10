@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Menu, Search, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
@@ -14,7 +15,9 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl md:text-2xl font-serif font-light tracking-wide text-foreground">Juliskin</h1>
+            <Link href="/" className="transition-opacity hover:opacity-80">
+              <div className="text-xl md:text-2xl font-serif font-light tracking-wide text-foreground">Juliskin</div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -24,6 +27,9 @@ export function Header() {
             </a>
             <a href="#tratamientos" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
               Tratamientos
+            </a>
+            <a href="/categorias/cursos" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
+              Cursos
             </a>
             {/* <a
               href="#sobre-nosotros"
@@ -77,6 +83,12 @@ export function Header() {
                 className="text-sm font-medium text-foreground hover:text-accent transition-colors"
               >
                 Tratamientos
+              </a>
+              <a
+                href="/categorias/cursos"
+                className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+              >
+                Cursos
               </a>
               {/* <a
                 href="#sobre-nosotros"

@@ -289,7 +289,7 @@ export const services: Service[] = [
       "Gel conductor especializado",
       "Hidratación",
     ],
-    ideal: ["Flacidez", "Pérdida de definición", "Prevención de envejecimiento", "Eventos especiales"],
+    ideal: ["Flacidez", "Pérdida de definición", "Prevención de envejecimiento", "Eventos especiales", "Mantenimiento"],
     process: [
       "Limpieza de la zona",
       "Aplicación de gel conductor",
@@ -305,22 +305,27 @@ export const services: Service[] = [
     categorySlug: "faciales",
     duration: "90 min",
     price: 260000,
-    image: "",
+    image: "https://i.ibb.co/wN0fj0fR/hidro-peeling.jpg",
     shortDescription: "Limpieza profunda combinada con exfoliación química",
     description:
       "Tratamiento combinado que une la limpieza profunda del Hydrafacial con la exfoliación química del peeling para resultados potenciados. Ideal para piel con múltiples necesidades.",
     benefits: ["Limpieza profunda", "Exfoliación química", "Resultados potenciados", "Piel renovada"],
     includes: [
       "Todos los beneficios del Hydrafacial",
-      "Aplicación de peeling químico",
+      "Todos los beneficios del peeling químico",
       "Fototerapia",
       "Mascarilla especializada",
     ],
-    ideal: ["Piel con múltiples problemas", "Resultados rápidos", "Eventos especiales", "Mantenimiento intensivo"],
+    ideal: ["Pieles acneicas", "Tratamiento intensivo"],
     process: [
-      "Hydrafacial completo",
+      "Preparación de piel",
+      "Toalla caliente",
+      "Extracción",
+      "Aparatología anti inflamatoria",
       "Aplicación de peeling químico",
-      "Fototerapia",
+      "Fototerapia Celluma ®",
+      "Mascarilla hidroplástica",
+      "Terapias relajantes",
       "Finalización con productos especializados",
     ],
   },
@@ -331,7 +336,7 @@ export const services: Service[] = [
     categorySlug: "faciales",
     duration: "90 min",
     price: 250000,
-    image: "",
+    image: "https://i.ibb.co/mrZKL13y/hidra-hidratacion.png",
     shortDescription: "Limpieza profunda con hidratación intensiva",
     description:
       "Combinación perfecta de limpieza profunda e hidratación intensiva para una piel radiante y profundamente nutrida.",
@@ -344,10 +349,15 @@ export const services: Service[] = [
     ],
     ideal: ["Piel muy deshidratada", "Después de tratamientos agresivos", "Piel sensible", "Hidratación extrema"],
     process: [
-      "Hydrafacial completo",
+      "Preparación de piel",
+      "Toalla caliente",
+      "Extracción",
+      "Aparatología anti inflamatoria",
       "Aplicación de ultrasonido",
       "Infusión de vitaminas",
       "Mascarilla hidroplástica",
+      "Terapias relajantes",
+      "Finalización con productos especializados",
     ],
   },
   {
@@ -357,20 +367,23 @@ export const services: Service[] = [
     categorySlug: "faciales",
     duration: "120 min",
     price: 320000,
-    image: "",
+    image: "https://i.ibb.co/JjQdpC3M/hidra-microaguja.jpg",
     shortDescription: "Limpieza profunda con estimulación de colágeno",
     description:
       "Tratamiento avanzado que combina la limpieza del Hydrafacial con la estimulación de colágeno de las microagujas para resultados anti-edad superiores.",
-    benefits: ["Limpieza profunda", "Estimula colágeno", "Anti-edad", "Mejora textura"],
+    benefits: ["Limpieza profunda", "Estimula colágeno", "Anti-manchas", "Mejora textura"],
     includes: [
       "Hydrafacial completo",
       "Microagujamiento",
       "Cóctel vitamínico",
-      "Fototerapia",
+      "Fototerapia Celluma ®",
     ],
-    ideal: ["Anti-edad", "Cicatrices", "Textura irregular", "Resultados intensivos"],
+    ideal: ["Textura irregular", "Resultados intensivos", "Piel con puntos negros y marcas de acné"],
     process: [
-      "Hydrafacial completo",
+      "Preparación de piel",
+      "Toalla caliente",
+      "Extracción",
+      "Aparatología anti inflamatoria",
       "Aplicación de vitaminas",
       "Microagujamiento",
       "Fototerapia Celluma ®",
@@ -383,7 +396,7 @@ export const services: Service[] = [
     categorySlug: "faciales",
     duration: "90 min",
     price: 260000,
-    image: "",
+    image: "https://i.ibb.co/GfTJS3DT/hidratacion-peelong.jpg",
     shortDescription: "Exfoliación química con hidratación profunda",
     description:
       "Combinación de exfoliación química para renovar la piel e hidratación intensiva para nutrirla profundamente.",
@@ -396,10 +409,15 @@ export const services: Service[] = [
     ],
     ideal: ["Piel opaca", "Manchas con deshidratación", "Renovación completa", "Piel madura"],
     process: [
+      "Toalla caliente",
+      "Hidrodermoabrasión",
       "Peeling químico",
-      "Neutralización",
-      "Hidratación intensiva",
+      "Aparatología estimuladora de colágeno (ultrasonido)",
+      "Cóctel de vitaminas hidratantes",
+      "Fototerapia Celluma ®",
       "Mascarilla hidroplástica",
+      "Masaje facial",
+      "Técnicas relajantes",
     ],
   },
   {
@@ -409,7 +427,7 @@ export const services: Service[] = [
     categorySlug: "faciales",
     duration: "90 min",
     price: 250000,
-    image: "",
+    image: "https://i.ibb.co/211CTSmj/microdermoabrasion-hidratacion.jpg",
     shortDescription: "Exfoliación avanzada con hidratación intensiva",
     description:
       "Tratamiento que combina la exfoliación profunda de la microdermoabrasión con la hidratación intensiva para una piel suave y nutrida.",
@@ -423,9 +441,12 @@ export const services: Service[] = [
     ideal: ["Piel áspera", "Textura irregular", "Piel deshidratada", "Renovación con hidratación"],
     process: [
       "Microdermoabrasión",
-      "Aplicación de vitaminas",
-      "Ultrasonido",
+      "Aparatología estimuladora de colágeno (ultrasonido)",
+      "Cóctel de vitaminas hidratantes",
+      "Fototerapia Celluma ®",
       "Mascarilla hidroplástica",
+      "Masaje facial",
+      "Técnicas relajantes",
     ],
   },
   // CAPILARES
@@ -452,7 +473,6 @@ export const services: Service[] = [
       "Historial y diagnóstico",
       "Preparación del cuero cabelludo",
       "Aplicación de activos",
-      "Masaje estimulante",
       "Recomendaciones de cuidado",
     ],
     isFeatured: true,
@@ -482,6 +502,7 @@ export const services: Service[] = [
       "Limpieza de la zona",
       "Microdermoabrasión",
       "Aplicación de ácidos",
+      "Fototerapia Celluma ®",
       "Mascarilla aclarante",
       "Hidratación",
     ],
@@ -493,7 +514,7 @@ export const services: Service[] = [
     categorySlug: "corporales",
     duration: "90 min",
     price: 320000,
-    image: "",
+    image: "https://i.ibb.co/jkvT96W2/acne-espalda.png",
     shortDescription: "Tratamiento completo para acné corporal y sus secuelas",
     description:
       "Mejoría en acné corporal y sus secuelas. Incluye exfoliación, preparación enzimática, microdermoabrasión si es necesaria, extracción, aplicación de ácidos y mascarilla aclarante.",
@@ -517,6 +538,7 @@ export const services: Service[] = [
       "Aplicación de ácidos",
       "Mascarilla aclarante",
       "Hidratación final",
+      "Recomendaciones personalizadas",
     ],
   },
   {
@@ -572,7 +594,7 @@ export const services: Service[] = [
     process: [
       "Examen e historial",
       "Microdermoabrasión delicada",
-      "Aplicación de ácidos específicos",
+      "Aplicación de ácidos específicos para zona intima",
       "Mascarilla aclarante",
       "Recomendaciones de cuidado",
     ],
@@ -594,7 +616,7 @@ export const services: Service[] = [
       "3 sesiones de masaje moldeante + radiofrecuencia Tensamax",
       "2 sesiones de enzimas lipolíticas",
     ],
-    ideal: ["Grasa localizada", "Primera vez", "Mantenimiento", "Necesidades puntuales"],
+    ideal: ["Personas con poca grasa localizada", "Marcación de músculos", "Mantenimiento", "Necesidades puntuales"],
     process: [
       "Masaje moldeante",
       "Radiofrecuencia Tensamax",
@@ -612,7 +634,7 @@ export const services: Service[] = [
     shortDescription: "Paquete avanzado de moldeo con aparatología completa",
     description:
       "Nuestro plan más completo de transformación corporal. Una potente combinación de técnicas manuales, radiofrecuencia, ultrasonido, drenaje y la última tecnología en electroestimulación.",
-    benefits: ["Transformación total", "Combate celulitis", "Tonificación muscular", "Drenaje de líquidos"],
+    benefits: ["Cambios significativos en reducción de medidas", "Combate celulitis", "Drenaje de líquidos", "Moldeo abdomen y cintura"],
     includes: [
       "5 sesiones de masaje moldeante + radiofrecuencia Tensamax",
       "3 sesiones de enzimas lipolíticas con ultrasonido",
@@ -649,7 +671,7 @@ export const services: Service[] = [
       "Acompañamiento por 3 meses"
     ],
     ideal: ["Profesionales de la estética", "Estudiantes", "Emprendedores"],
-    process: ["Teoría fundamental", "Demostración práctica", "Práctica asistida"],
+    process: ["Teoría fundamental de fisiología y anatomía de la piel", "Protocolo completo de limpieza facial perfeccionado por Juli Skin ® ", "Demostración práctica", "Práctica asistida"],
   },
   {
     id: 22,
@@ -666,12 +688,13 @@ export const services: Service[] = [
     includes: [
       "Teoría y Fisiología",
       "Protocolos y principios activos",
+      "Protocolos completos en PDF",
       "Manejo de equipos",
       "Práctica con modelos",
       "Certificación"
     ],
     ideal: ["Tratar cicatrices", "Rejuvenecimiento", "Profesionales avanzados"],
-    process: ["Teoría técnica", "Manejo del dispositivo", "Práctica en modelo"],
+    process: ["Teoría fundamental de fisiología y anatomía de la piel", "Protocolo completo de microagujamiento perfeccionado por Juli Skin ®", "Manejo del dispositivo", "Práctica en modelo"],
   },
 
 
@@ -682,7 +705,7 @@ export const services: Service[] = [
     categorySlug: "cursos",
     duration: "6 horas",
     price: 0,
-    image: "",
+    image: "https://i.ibb.co/G484Bsnv/linfatico.jpg",
     shortDescription: "Técnicas manuales para tratamientos faciales y corporales",
     description:
       "Domina la anatomía, fisiología y los protocolos del drenaje linfático manual. Esencial para tratamientos faciales, corporales y recuperación postquirúrgica.",
@@ -690,12 +713,13 @@ export const services: Service[] = [
     includes: [
       "Anatomía del sistema linfático",
       "Fisiología",
+      "Protocolos completos en PDF",
       "Protocolos de drenaje",
       "Aplicaciones estéticas",
       "Práctica manual"
     ],
     ideal: ["Post-quirúrgicos", "Reducción de edema", "Tratamientos relajantes"],
-    process: ["Teoría anatómica", "Maniobras básicas", "Protocolos completos"],
+    process: ["Teoría anatómica y fisiológica completa de sistema linfático y circulatorio", "Maniobras avanzadas y actualizadas de drenaje linfático manual", "Protocolos completos", "Práctica manual"],
   },
 
 
@@ -714,12 +738,13 @@ export const services: Service[] = [
     includes: [
       "Diagnóstico avanzado",
       "Tratamientos combinados",
+      "Protocolos completos en PDF",
       "Nutrición y hábitos",
       "Rutinas personalizadas",
       "Certificación Premium"
     ],
-    ideal: ["Especialistas en acné", "Casos difíciles", "Enfoque dermatológico"],
-    process: ["Diagnóstico", "Plan de tratamiento", "Seguimiento"],
+    ideal: ["Especialistas en acné", "Casos difíciles", "Enfoque avanzado"],
+    process: ["Diagnóstico inteligente", "Teoría fundamental de fisiología y anatomía de la piel con acné", "Protocolo completo de tratamiento avanzado del acné perfeccionado por Juli Skin ®", "Plan de tratamiento", "rutinas para todo tipo de acné", "Recomendaciones de alimentación y estilo de vida", "Practica en usuarios", "Seguimiento"],
   },
   {
     id: 29,
@@ -735,13 +760,13 @@ export const services: Service[] = [
     benefits: ["Solución a manchas", "Protocolo seguro", "Resultados visibles", "Caso a caso"],
     includes: [
       "Fisiopatología de la mancha",
-      "Selección de activos",
+      "Selección de activos y rutinas personalizadas",
+      "Protocolos completos en PDF",
       "Peelings y aparatología",
-      "Skincare despigmentante",
       "Certificación Premium"
     ],
     ideal: ["Melasma", "Hiperpigmentación", "Fotoenvejecimiento"],
-    process: ["Evaluación", "Tratamiento despigmentante", "Mantenimiento"],
+    process: ["Evaluación", "Teoría fundamental de fisiología y anatomía de la piel hiperpigmentada", "Protocolo completo de tratamiento avanzado del manchas perfeccionado por Juli Skin ®", "Tratamiento despigmentante", "Mantenimiento"],
   },
   {
     id: 30,
@@ -750,7 +775,7 @@ export const services: Service[] = [
     categorySlug: "cursos",
     duration: "12 horas",
     price: 0,
-    image: "",
+    image: "https://i.ibb.co/C54dt7KX/curso-cicatriz.png",
     shortDescription: "Especialización en secuelas de acné",
     description:
       "Protocolo avanzado para cicatrices atróficas. Cubre causas, anatomía, tipos de cicatrices, tratamientos combinados, skincare y productos recomendados.",
@@ -758,12 +783,13 @@ export const services: Service[] = [
     includes: [
       "Tipos de cicatrices",
       "Técnicas combinadas",
+      "Protocolos completos en PDF",
       "Inducción de colágeno",
       "Recuperación de piel",
       "Certificación Premium"
     ],
-    ideal: ["Secuelas severas", "Piel irregular", "Tratamientos correctivos"],
-    process: ["Evaluación de tejido", "Plan combinado", "Regeneración"],
+    ideal: ["Secuelas severas", "Profesionales que deseen realizar tratamientos avanzados y actualizados"],
+    process: ["Evaluación de tejido", "Teoría fundamental de fisiología y anatomía de la cicatriz", "Protocolo completo de tratamiento avanzado de cicatrices atróficas perfeccionado por Juli Skin ®", "Plan combinado", "Regeneración"],
   },
   {
     id: 31,
@@ -772,7 +798,7 @@ export const services: Service[] = [
     categorySlug: "cursos",
     duration: "2 horas",
     price: 0,
-    image: "",
+    image: "https://i.ibb.co/zHXnRBM4/curso-bolsas.png",
     shortDescription: "Protocolo exclusivo JuliSkin para zona periocular",
     description:
       "Aprende anatomía periocular, causas del envejecimiento, uso de plasmapen, mesoterapia y protocolos completos para tratar párpados caídos y ojeras tipo bolsa.",
@@ -780,12 +806,13 @@ export const services: Service[] = [
     includes: [
       "Anatomía periocular",
       "Técnicas de Plasmapen",
+      "Protocolos completos en PDF",
       "Mesoterapia específica",
       "Protocolo exclusivo",
       "Certificación"
     ],
     ideal: ["Mirada cansada", "Bolsas y ojeras", "Flacidez palpebral"],
-    process: ["Diagnóstico diferencial", "Técnica combinada", "Cuidados delicados"],
+    process: ["Diagnóstico diferencial", "Teoría fundamental de fisiología y anatomía del área periocular", "Protocolo completo de tratamiento avanzado de ojeras y bolsas perfeccionado por Juli Skin ®", "Técnica combinada", "Cuidados delicados"],
   },
   {
     id: 32,
@@ -794,7 +821,7 @@ export const services: Service[] = [
     categorySlug: "cursos",
     duration: "Virtual - Presencial",
     price: 0,
-    image: "",
+    image: "https://i.ibb.co/mr0D9CTw/curso-limpieza.png",
     shortDescription: "Bioseguridad y estándares de calidad",
     description:
       "Mejora la calidad de tu servicio aprendiendo sobre factores de riesgo, limpieza, correcta desinfección y esterilización de equipos y materiales.",
@@ -802,12 +829,13 @@ export const services: Service[] = [
     includes: [
       "Normativa vigente",
       "Protocolos de limpieza",
+      "Protocolos completos en PDF",
       "Procesos de esterilización",
       "Manejo de residuos",
       "Certificación"
     ],
-    ideal: ["Todo profesional estético", "Apertura de local", "Auditorías"],
-    process: ["Fundamentos", "Protocolos paso a paso", "Implementación"],
+    ideal: ["Todo profesional estético", "Apertura de local"],
+    process: ["Teoria completa de limpieza, desinfección y esterilización de herramientas cosmetologicas", "Recomendaciones de cuidado para herramientas y equipos", "Protocolos paso a paso", "Implementación"],
   },
   {
     id: 33,
@@ -828,7 +856,7 @@ export const services: Service[] = [
       "Resolución de dudas específicas",
       "Recomendaciones personalizadas"
     ],
-    ideal: ["Profesionales con dudas", "Estudiantes", "Emprendedores", "Revisión de casos"],
+    ideal: ["Profesionales con dudas", "Apertura de local", "Estudiantes", "Emprendedores", "Revisión de casos"],
     process: ["Evaluación de necesidades", "Sesión de mentoría", "Plan de acción"],
   },
 ]
@@ -863,7 +891,7 @@ export function getCategoryInfo(slug: string) {
     },
     cursos: {
       name: "Cursos y Talleres",
-      description: "Aprende técnicas profesionales para el cuidado de tu piel y belleza.",
+      description: "Capacitaciones avanzadas para profesionales de la estética.",
       longDescription: "Nuestros cursos están diseñados para empoderarte con el conocimiento y las técnicas necesarias para un cuidado personal experto. Desde automaquillaje hasta rutinas de skincare avanzadas, aprende de la mano de profesionales.",
       image: "https://i.ibb.co/yns7hf2x/tratamientos-faciales.jpg",
     },

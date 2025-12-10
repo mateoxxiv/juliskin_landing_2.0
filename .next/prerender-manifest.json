@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "bd6c1d93090b4f7e91aed6439450560a",
-    "previewModeSigningKey": "24c82b61fdf5f46eb546d8f029fceba7090e70453f3a4642268bf4079b6bf52c",
-    "previewModeEncryptionKey": "e34dd9ef3b81e07595df1b14097569d515f47274efa5bfe2132ee28ab60f3f8c"
-  }
-}
+{"version":4,"routes":{"/categorias/faciales":{},"/categorias/capilares":{},"/categorias/corporales":{}},"dynamicRoutes":{"/categorias/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/categorias/[slug]","routeRegex":"^\\/categorias\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"075dda59f8a2632a577bd1a67ec96ccb","previewModeSigningKey":"00b677a8ecc2c290576398578b36678ec4b50d7664e2f058648c5a589a6427ae","previewModeEncryptionKey":"f44385b7fdaa14517527e4a53c7fc6815d39acb50a23c119b8c166c8c364599e"}}

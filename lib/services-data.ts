@@ -254,7 +254,7 @@ export const services: Service[] = [
     categorySlug: "faciales",
     duration: "35 min",
     price: 70000,
-    image: "https://i.ibb.co/v4PgXZbN/Celluma ®.jpg",
+    image: "https://i.ibb.co/qY2YvJ65/celluma-tratamiento.jpg",
     shortDescription: "Terapia de luz LED para acné y rejuvenecimiento",
     description:
       "Terapia de luz LED de grado médico. Sus longitudes de onda trabajan en capas profundas para tratar acné, calmar rojeces, acelerar la cicatrización, mejorar la textura y apoyar procesos de rejuvenecimiento. Es un complemento ideal después de procedimientos, ya que disminuye el tiempo de recuperación y potencia los resultados de cualquier tratamiento facial.",
@@ -436,7 +436,7 @@ export const services: Service[] = [
     categorySlug: "capilares",
     duration: "60 min",
     price: 250000,
-    image: "https://i.ibb.co/gZfcbDRQ/crecimiento-capilar.jpg",
+    image: "https://i.ibb.co/4nQsxckC/crecimiento-capilar.jpg",
     shortDescription: "Estimula el crecimiento del cabello y previene la caída",
     description:
       "Aplicación de diferentes activos que estimulan el crecimiento del pelo, previniendo y mejorando diferentes tipos de caída. Incluye historial, recomendación de productos y seguimiento.",
@@ -636,7 +636,7 @@ export const services: Service[] = [
     categorySlug: "cursos",
     duration: "Virtual - Presencial",
     price: 0,
-    image: "",
+    image: "https://i.ibb.co/5g82tsx8/curso-limpieza-facial.jpg",
     shortDescription: "Aprende varios tipos de limpieza facial para todas las pieles",
     description:
       "Capacitación completa que incluye biotipos, fototipos, anatomía, enfermedades, protocolo, proveedores y práctica. Ideal para aprender varios tipos de limpieza facial para todas las pieles.",
@@ -658,7 +658,7 @@ export const services: Service[] = [
     categorySlug: "cursos",
     duration: "6 horas",
     price: 0,
-    image: "",
+    image: "https://i.ibb.co/XxM5JgMY/curso-microaguja.jpg",
     shortDescription: "Domina la técnica de Dermapen para cicatrices y rejuvenecimiento",
     description:
       "Aprende fisiología, protocolo, principios activos, manejo de agujas (velocidad y profundidad) y práctica. Ideal para tratar cicatrices de acné, HPI, líneas finas, poros dilatados y envejecimiento prematuro.",
@@ -706,7 +706,7 @@ export const services: Service[] = [
     categorySlug: "cursos",
     duration: "12 horas (4 clases)",
     price: 0,
-    image: "",
+    image: "https://i.ibb.co/ymPfSVk8/protocolo-acne.jpg",
     shortDescription: "El protocolo real usado por JuliSkin para tratar acné",
     description:
       "Protocolo especializado que abarca causas, tipos, fallas hormonales, acné adulto, tratamientos, recomendaciones alimenticias, rutina personalizada y productos sugeridos.",
@@ -728,7 +728,7 @@ export const services: Service[] = [
     categorySlug: "cursos",
     duration: "12 horas",
     price: 0,
-    image: "",
+    image: "https://i.ibb.co/rR6vWzN7/protocolo-manchas.jpg",
     shortDescription: "Protocolo exclusivo para hiperpigmentación",
     description:
       "Aprende a tratar hiperpigmentaciones con el protocolo usado por JuliSkin. Incluye causas, tipos, tratamientos personalizados, skincare y productos recomendados.",
@@ -816,7 +816,7 @@ export const services: Service[] = [
     categorySlug: "cursos",
     duration: "A convenir",
     price: 0,
-    image: "",
+    image: "https://i.ibb.co/67v4WCvN/curso-personalizado.jpg",
     shortDescription: "Mentoría 1 a 1 para resolver dudas y casos clínicos",
     description:
       "Espacio exclusivo diseñado para profesionales o estudiantes que necesitan resolver dudas puntuales, analizar casos clínicos complejos o recibir orientación sobre protocolos y emprendimiento en estética.",

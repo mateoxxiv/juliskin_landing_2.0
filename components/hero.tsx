@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import { WHATSAPP_URL } from "@/lib/constants"
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
+import { WHATSAPP_URL } from '@/lib/constants'
 
 export function Hero() {
   return (
@@ -22,16 +22,21 @@ export function Hero() {
           Experiencia Premium
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light text-foreground mb-6 md:mb-8 leading-tight text-balance">
-          {"Renueva tu piel,"}
+          {'Renueva tu piel,'}
           <br />
-          {"transforma tu belleza"}
+          {'transforma tu belleza'}
         </h1>
         <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed text-pretty">
-          Tratamientos cosmetológicos innovadores que realzan tu belleza natural. Tecnología de vanguardia combinada con
-          técnicas especializadas para resultados visibles y duraderos.
+          Tratamientos cosmetológicos innovadores que realzan tu belleza
+          natural. Tecnología de vanguardia combinada con técnicas
+          especializadas para resultados visibles y duraderos.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 min-w-[200px]" asChild>
+          <Button
+            size="lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 min-w-[200px]"
+            asChild
+          >
             <Link href="/servicios">
               Ver Tratamientos
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -53,7 +58,9 @@ export function Hero() {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
         <div className="flex flex-col items-center gap-2 text-muted-foreground">
-          <span className="text-xs tracking-widest uppercase">Descubre más</span>
+          <span className="text-xs tracking-widest uppercase">
+            Descubre más
+          </span>
           <div className="w-[1px] h-12 bg-muted-foreground/30 animate-pulse" />
         </div>
       </div>

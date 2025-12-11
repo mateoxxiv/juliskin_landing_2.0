@@ -1,19 +1,19 @@
-"use client"
+'use client'
 
-import type React from "react"
+import type React from 'react'
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { useState } from "react"
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { useState } from 'react'
 
 export function Newsletter() {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState('')
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle newsletter subscription
-    console.log("Newsletter subscription:", email)
-    setEmail("")
+    console.log('Newsletter subscription:', email)
+    setEmail('')
   }
 
   return (
@@ -24,11 +24,14 @@ export function Newsletter() {
             Únete a nuestra comunidad
           </h2>
           <p className="text-muted-foreground mb-8 leading-relaxed text-pretty">
-            Recibe consejos exclusivos de belleza, promociones especiales y novedades de nuestros tratamientos
-            directamente en tu correo
+            Recibe consejos exclusivos de belleza, promociones especiales y
+            novedades de nuestros tratamientos directamente en tu correo
           </p>
 
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+          >
             <Input
               type="email"
               placeholder="Tu correo electrónico"
@@ -37,13 +40,17 @@ export function Newsletter() {
               required
               className="flex-1 bg-background border-border"
             />
-            <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90 whitespace-nowrap">
+            <Button
+              type="submit"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 whitespace-nowrap"
+            >
               Suscribirse
             </Button>
           </form>
 
           <p className="text-xs text-muted-foreground mt-4">
-            Al suscribirte, aceptas recibir correos electrónicos de marketing. Puedes cancelar en cualquier momento.
+            Al suscribirte, aceptas recibir correos electrónicos de marketing.
+            Puedes cancelar en cualquier momento.
           </p>
         </div>
       </div>

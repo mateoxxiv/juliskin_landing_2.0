@@ -26,18 +26,20 @@ Landing page premium para servicios de cosmetología con diseño elegante y mode
 
 ### Prerrequisitos
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, pnpm o bun
 
 ### Instalación
 
 1. Clona el repositorio:
+
 ```bash
 git clone https://github.com/tu-usuario/juliskin_landing_2.0.git
 cd juliskin_landing_2.0
 ```
 
 2. Instala las dependencias:
+
 ```bash
 npm install
 # o
@@ -47,6 +49,7 @@ pnpm install
 ```
 
 3. Ejecuta el servidor de desarrollo:
+
 ```bash
 npm run dev
 # o
@@ -168,11 +171,9 @@ export function ServiceCard({ service, className }: ServiceCardProps) {
 Definidos en `app/globals.css`:
 
 ```css
---primary: 35 25% 50%        /* Marrón cálido */
---accent: 40 65% 85%          /* Beige claro */
---accent-gold: 45 75% 65%     /* Dorado suave */
---foreground: 30 15% 15%      /* Texto oscuro */
---background: 40 25% 97%      /* Fondo crema */
+--primary: 35 25% 50% /* Marrón cálido */ --accent: 40 65% 85% /* Beige claro */
+  --accent-gold: 45 75% 65% /* Dorado suave */ --foreground: 30 15% 15%
+  /* Texto oscuro */ --background: 40 25% 97% /* Fondo crema */;
 ```
 
 ### Datos de Servicios

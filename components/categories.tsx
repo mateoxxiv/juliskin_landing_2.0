@@ -1,50 +1,59 @@
-import Link from "next/link"
+import { LoadingLink } from '@/components/loading-link'
 
 const categories = [
   {
-    name: "Tratamientos Faciales",
-    slug: "faciales",
-    description: "Revitaliza tu piel con tratamientos avanzados de limpieza, hidratación profunda y rejuvenecimiento.",
-    image: "/treatment_facial.jpeg",
+    name: 'Tratamientos Faciales',
+    slug: 'faciales',
+    description:
+      'Revitaliza tu piel con tratamientos avanzados de limpieza, hidratación profunda y rejuvenecimiento.',
+    image: '/treatment_facial.jpeg',
   },
   {
-    name: "Tratamientos Capilares",
-    slug: "capilares",
-    description: "Soluciones innovadoras y tecnología de punta para restaurar la salud y vitalidad de tu cabello.",
-    image: "https://i.ibb.co/nNWvV0nM/capilar2.jpg",
+    name: 'Tratamientos Capilares',
+    slug: 'capilares',
+    description:
+      'Soluciones innovadoras y tecnología de punta para restaurar la salud y vitalidad de tu cabello.',
+    image: 'https://i.ibb.co/nNWvV0nM/capilar2.jpg',
   },
   {
-    name: "Tratamientos Corporales",
-    slug: "corporales",
-    description: "Experiencias de bienestar integral que esculpen, tonifican y relajan tu cuerpo.",
-    image: "https://i.ibb.co/JRf8TpnH/peeling-corporal.png",
+    name: 'Tratamientos Corporales',
+    slug: 'corporales',
+    description:
+      'Experiencias de bienestar integral que esculpen, tonifican y relajan tu cuerpo.',
+    image: 'https://i.ibb.co/JRf8TpnH/peeling-corporal.png',
   },
 ]
 
 export function Categories() {
   return (
-    <section id="tratamientos" className="py-16 md:py-24 lg:py-32 bg-secondary/30">
+    <section
+      id="tratamientos"
+      className="py-16 md:py-24 lg:py-32 bg-secondary/30"
+    >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">Explora</p>
+          <p className="text-sm tracking-[0.3em] uppercase text-muted-foreground mb-4">
+            Explora
+          </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-foreground mb-6 text-balance">
             Categorías de tratamientos
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty">
-            Cada tratamiento diseñado con la más alta tecnología e innovación para tu bienestar
+            Cada tratamiento diseñado con la más alta tecnología e innovación
+            para tu bienestar
           </p>
         </div>
 
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {categories.map((category, index) => (
-            <Link
+            <LoadingLink
               key={index}
               href={`/categorias/${category.slug}`}
               className="group relative block overflow-hidden rounded-lg aspect-[3/4] bg-gray-200 shadow-md hover:shadow-xl transition-all duration-300"
               style={{
-                backgroundImage: `url(${category.image || "/placeholder.svg"})`,
+                backgroundImage: `url(${category.image || '/placeholder.svg'})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -55,7 +64,9 @@ export function Categories() {
 
               {/* Content sits on top */}
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 text-white z-10">
-                <h3 className="text-xl md:text-2xl font-serif font-light mb-2 text-balance">{category.name}</h3>
+                <h3 className="text-xl md:text-2xl font-serif font-light mb-2 text-balance">
+                  {category.name}
+                </h3>
                 <p className="text-sm text-white/90 mb-4 leading-relaxed text-pretty text-shadow-sm line-clamp-3">
                   {category.description}
                 </p>
@@ -63,7 +74,7 @@ export function Categories() {
                   Explorar
                 </span>
               </div>
-            </Link>
+            </LoadingLink>
           ))}
         </div>
       </div>

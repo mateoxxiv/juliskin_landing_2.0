@@ -1,5 +1,6 @@
-import { Instagram, Facebook, Youtube } from "lucide-react"
-import { WHATSAPP_URL } from "@/lib/constants"
+import { Instagram, Facebook, Youtube } from 'lucide-react'
+import { LoadingLink } from '@/components/loading-link'
+import { WHATSAPP_URL } from '@/lib/constants'
 
 export function Footer() {
   return (
@@ -8,35 +9,52 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-8">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-serif font-light mb-4">Juliskin Cosmetología</h3>
+            <h3 className="text-xl font-serif font-light mb-4">
+              Juliskin Cosmetología
+            </h3>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Cosmetología premium que transforma tu belleza natural en resultados extraordinarios.
+              Cosmetología premium que transforma tu belleza natural en
+              resultados extraordinarios.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-medium mb-4 uppercase text-sm tracking-wider">Servicios</h4>
+            <h4 className="font-medium mb-4 uppercase text-sm tracking-wider">
+              Servicios
+            </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/categorias/faciales" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <LoadingLink
+                  href="/categorias/faciales"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
                   Tratamientos Faciales
-                </a>
+                </LoadingLink>
               </li>
               <li>
-                <a href="/categorias/capilares" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <LoadingLink
+                  href="/categorias/capilares"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
                   Tratamientos Capilares
-                </a>
+                </LoadingLink>
               </li>
               <li>
-                <a href="/categorias/corporales" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <LoadingLink
+                  href="/categorias/corporales"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
                   Tratamientos Corporales
-                </a>
+                </LoadingLink>
               </li>
               <li>
-                <a href="/servicios" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <LoadingLink
+                  href="/servicios"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
                   Todos los Servicios
-                </a>
+                </LoadingLink>
               </li>
             </ul>
           </div>
@@ -75,18 +93,25 @@ export function Footer() {
 
           {/* About */}
           <div>
-            <h4 className="font-medium mb-4 uppercase text-sm tracking-wider">Ubicación</h4>
+            <h4 className="font-medium mb-4 uppercase text-sm tracking-wider">
+              Ubicación
+            </h4>
             <div className="text-sm text-primary-foreground/80 leading-relaxed">
-              <p className="font-medium text-primary-foreground mb-2">Dirección:</p>
+              <p className="font-medium text-primary-foreground mb-2">
+                Dirección:
+              </p>
               <a
                 href="https://maps.google.com/?q=Mall+portal+de,+Cra.+54A+%2375+Sur+13,+Portal+de+Ditaires,+La+Estrella,+Itagüi,+Antioquia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary-foreground transition-colors"
               >
-                Mall Portal de Ditaires<br />
-                Cra. 54A #75 Sur 13<br />
-                La Estrella, Itagüí<br />
+                Mall Portal de Ditaires
+                <br />
+                Cra. 54A #75 Sur 13
+                <br />
+                La Estrella, Itagüí
+                <br />
                 Antioquia, Colombia
               </a>
             </div>
@@ -96,7 +121,9 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/80">© 2025 Juliskin Cosmetología. Todos los derechos reservados.</p>
+            <p className="text-sm text-primary-foreground/80">
+              © 2025 Juliskin Cosmetología. Todos los derechos reservados.
+            </p>
 
             {/* Social Links */}
             <div className="flex items-center gap-4">

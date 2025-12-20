@@ -23,7 +23,7 @@ export const services: Service[] = [
     category: 'Diagnóstico',
     categorySlug: 'faciales',
     duration: '30 min',
-    price: 100000,
+    price: 110000,
     image: 'https://i.ibb.co/GQBJM2W7/diagnostico-piel.jpg',
     shortDescription:
       'Evaluación integral de tu piel con aparatología especializada',
@@ -62,7 +62,7 @@ export const services: Service[] = [
     category: 'Limpieza Profunda',
     categorySlug: 'faciales',
     duration: '80 min',
-    price: 190000,
+    price: 198000 ,
     image: 'https://i.ibb.co/dw1cb8Pv/limpieza-facial.jpg',
     shortDescription: 'Limpieza profunda que revitaliza e hidrata la piel',
     description:
@@ -222,7 +222,7 @@ export const services: Service[] = [
     categorySlug: 'faciales',
     duration: '60 min',
     price: 200000,
-    image: 'https://i.ibb.co/TBGT0Mp5/peeling-quimico.jpg',
+    image: 'https://i.ibb.co/Vctw625s/peeling-espalda.jpg',
     shortDescription:
       'Exfoliación química para mejorar pigmentaciones y luminosidad',
     description:

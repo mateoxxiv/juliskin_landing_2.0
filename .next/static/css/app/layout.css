@@ -725,6 +725,12 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
+  }
   .h-\[50vh\] {
     height: 50vh;
   }
@@ -917,6 +923,9 @@
   .overflow-x-auto {
     overflow-x: auto;
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -1025,6 +1034,9 @@
   }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
+  }
+  .bg-muted {
+    background-color: var(--color-muted);
   }
   .bg-muted-foreground\/30 {
     background-color: var(--color-muted-foreground);

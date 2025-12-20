@@ -127,7 +127,7 @@ export function Footer() {
 
             {/* Social Links */}
             <div className="flex items-center gap-4">
-              <a
+{/*               <a
                 href="#"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 aria-label="Instagram"
@@ -147,7 +147,7 @@ export function Footer() {
                 aria-label="YouTube"
               >
                 <Youtube className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

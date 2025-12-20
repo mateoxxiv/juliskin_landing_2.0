@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/categorias/faciales":{},"/categorias/capilares":{},"/categorias/corporales":{}},"dynamicRoutes":{"/categorias/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/categorias/[slug]","routeRegex":"^\\/categorias\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"98094b2d8e88481ff131aadf16019053","previewModeSigningKey":"bd6c9fe3aea9a4c5abeee20d7fb001e1af47a4c2fa570811df96dda79f1bc366","previewModeEncryptionKey":"16b7822d9f3d8c907fcb1f5fb27242cac3006d101cc3cd4ff72f1d23ccb048f3"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "2a21ffebe9be3f7aac8242602b98aaa2",
+    "previewModeSigningKey": "1364f5718e746544e3ed9ec3a5bf1b6ba33a3a2f8ff43555ff09eae220024f5c",
+    "previewModeEncryptionKey": "32d67dc1b9168ba0623d93d68f952828bfcf18d227f0b194b9b0977bac21a974"
+  }
+}

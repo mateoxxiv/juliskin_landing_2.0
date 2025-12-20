@@ -14,10 +14,7 @@ const Testimonials = dynamic(
   }
 )
 
-const Newsletter = dynamic(
-  () => import('@/components/newsletter').then((mod) => mod.Newsletter),
-  { ssr: false } // Newsletter no suele ser crítico para SEO
-)
+import Newsletter from '@/components/newsletter.client'
 
 export const metadata = {
   title: 'Juliskin | Cosmetología Premium Transformadora',
@@ -37,8 +34,8 @@ export default function Home() {
       <Hero />
       <FeaturedServices />
       <Categories />
-      <Testimonials />
-      {/* <Newsletter /> */}
+      {/* <Testimonials />
+      <Newsletter /> */}
       <Footer />
     </main>
   )

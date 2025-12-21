@@ -1,1 +1,59 @@
-node_modules
+# Node modules
+node_modules/
+
+# pnpm store
+.pnpm-store/
+
+# Next.js build output
+.next/
+.next/cache/
+out/
+
+# Build directories and bundler caches
+dist/
+build/
+.cache/
+.tmp/
+
+# Local environment variables (do NOT commit secrets)
+.env.local
+.env.*.local
+.env
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.iml
+
+# Test coverage
+coverage/
+
+# Misc
+.eslintcache
+.storybook/
+
+# Netlify / Vercel local build artifacts
+.netlify/
+.vercel/
+
+# Optional: ignore local npm-debug and lockfile backups
+npm-debug.log*
+
+# Keep pnpm-lock.yaml committed for reproducible installs
+# (Do NOT add pnpm-lock.yaml here)
+

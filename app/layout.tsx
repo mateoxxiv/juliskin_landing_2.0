@@ -1,4 +1,4 @@
-import type React from 'react'
+import React, { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { Geist, Cormorant_Garamond } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
@@ -69,9 +69,11 @@ export default function RootLayout({
       <body
         className={`${geist.variable} ${cormorant.variable} font-sans antialiased`}
       >
-        <LoadingProvider>
-          {children}
-        </LoadingProvider>
+        <Suspense fallback={<div />}> 
+          <LoadingProvider>
+            {children}
+          </LoadingProvider>
+        </Suspense>
         <JsonLd />
         <Analytics />
       </body>

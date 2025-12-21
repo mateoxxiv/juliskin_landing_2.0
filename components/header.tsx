@@ -1,10 +1,11 @@
-"use client"
+'use client'
 
-import Link from "next/link"
-import { Menu, Search, Phone } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useState } from "react"
-import { WHATSAPP_URL } from "@/lib/constants"
+import Link from 'next/link'
+import { LoadingLink } from '@/components/loading-link'
+import { Menu, Search, Phone } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { useState } from 'react'
+import { WHATSAPP_URL } from '@/lib/constants'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,30 +17,32 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="transition-opacity hover:opacity-80">
-              <div className="text-xl md:text-2xl font-serif font-light tracking-wide text-foreground">Juliskin</div>
+              <div className="text-xl md:text-2xl font-serif font-light tracking-wide text-foreground">
+                Juliskin
+              </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="/servicios" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
-              Servicios
-            </a>
-            <a href="#tratamientos" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
-              Tratamientos
-            </a>
-            <a href="/categorias/cursos" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
-              Cursos
-            </a>
-            {/* <a
-              href="#sobre-nosotros"
+            <LoadingLink
+              href="/servicios"
               className="text-sm font-medium text-foreground hover:text-accent transition-colors"
             >
-              Nuestra Historia
-            </a>
-            <a href="#contacto" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
-              Contacto
-            </a> */}
+              Servicios
+            </LoadingLink>
+            <LoadingLink
+              href="/#tratamientos"
+              className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+            >
+              Tratamientos
+            </LoadingLink>
+            <LoadingLink
+              href="/categorias/cursos"
+              className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+            >
+              Cursos
+            </LoadingLink>
           </nav>
 
           {/* Actions */}
@@ -75,37 +78,47 @@ export function Header() {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
-              <a href="/servicios" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
+              <LoadingLink
+                href="/servicios"
+                className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+              >
                 Servicios
-              </a>
-              <a
-                href="#tratamientos"
+              </LoadingLink>
+              <LoadingLink
+                href="/#tratamientos"
                 className="text-sm font-medium text-foreground hover:text-accent transition-colors"
               >
                 Tratamientos
-              </a>
-              <a
+              </LoadingLink>
+              <LoadingLink
                 href="/categorias/cursos"
                 className="text-sm font-medium text-foreground hover:text-accent transition-colors"
               >
                 Cursos
-              </a>
-              {/* <a
-                href="#sobre-nosotros"
+              </LoadingLink>
+              {/* <LoadingLink
+                href="/#sobre-nosotros"
                 className="text-sm font-medium text-foreground hover:text-accent transition-colors"
               >
                 Nuestra Historia
-              </a> */}
-              <a href="#contacto" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
+              </LoadingLink> */}
+              <LoadingLink
+                href="/#contacto"
+                className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+              >
                 Contacto
-              </a>
+              </LoadingLink>
               <Button
                 variant="default"
                 size="sm"
                 className="flex items-center justify-center gap-2 mt-2"
                 asChild
               >
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Phone className="h-4 w-4" />
                   Agendar Cita
                 </a>

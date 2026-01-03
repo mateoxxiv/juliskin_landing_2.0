@@ -1,4 +1,4 @@
-import script from 'next/script'
+import Script from 'next/script'
 
 export function JsonLd() {
     const jsonLd = {
@@ -38,11 +38,11 @@ export function JsonLd() {
     }
 
     return (
-        <section>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-        </section>
+        <Script
+            id="json-ld"
+            type="application/ld+json"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
     )
 }

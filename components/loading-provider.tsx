@@ -1,29 +1,34 @@
 'use client'
 
-import { createContext, useContext, useState, useCallback, useEffect } from 'react'
+import { createContext, useContext, useState, useCallback, useEffect, useTransition } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { Spinner } from '@/components/ui/spinner'
 
 interface LoadingContextType {
   isLoading: boolean
+  isPending: boolean
   startLoading: () => void
   stopLoading: () => void
 }
 
 const LoadingContext = createContext<LoadingContextType>({
   isLoading: false,
+  isPending: false,
   startLoading: () => { },
   stopLoading: () => { },
 })
 
 export function LoadingProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(false)
+  const [isPending, startTransition] = useTransition()
 
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
   const startLoading = useCallback(() => {
-    setIsLoading(true)
+    startTransition(() => {
+      setIsLoading(true)
+    })
   }, [])
 
   const stopLoading = useCallback(() => {
@@ -35,7 +40,7 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
   }, [pathname, searchParams, stopLoading])
 
   return (
-    <LoadingContext.Provider value={{ isLoading, startLoading, stopLoading }}>
+    <LoadingContext.Provider value={{ isLoading, isPending, startLoading, stopLoading }}>
       {children}
       {isLoading && (
         <div className="page-loader">

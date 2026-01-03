@@ -24,6 +24,8 @@ const categories = [
   },
 ]
 
+import Image from 'next/image'
+
 export function Categories() {
   return (
     <section
@@ -52,13 +54,14 @@ export function Categories() {
               key={index}
               href={`/categorias/${category.slug}`}
               className="group relative block overflow-hidden rounded-lg aspect-[3/4] bg-gray-200 shadow-md hover:shadow-xl transition-all duration-300"
-              style={{
-                backgroundImage: `url(${category.image || '/placeholder.svg'})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-              }}
             >
+              <Image
+                src={category.image || '/placeholder.svg'}
+                alt={category.name}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                unoptimized={category.image?.includes('ibb.co')}
+              />
               {/* Overlay Gradient for readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 pointer-events-none" />
 
@@ -67,7 +70,7 @@ export function Categories() {
                 <h3 className="text-xl md:text-2xl font-serif font-light mb-2 text-balance">
                   {category.name}
                 </h3>
-                <p className="text-sm text-white/90 mb-4 leading-relaxed text-pretty text-shadow-sm line-clamp-3">
+                <p className="text-base text-white/90 mb-4 leading-relaxed text-pretty text-shadow-sm line-clamp-3">
                   {category.description}
                 </p>
                 <span className="text-sm font-medium uppercase tracking-wider border-b border-white/50 group-hover:border-white transition-colors pb-1 inline-block mt-2">

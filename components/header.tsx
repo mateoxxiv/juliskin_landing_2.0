@@ -27,19 +27,19 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <LoadingLink
               href="/servicios"
-              className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+              className="text-base font-medium text-foreground hover:text-accent transition-colors py-2 px-1"
             >
               Servicios
             </LoadingLink>
             <LoadingLink
               href="/#tratamientos"
-              className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+              className="text-base font-medium text-foreground hover:text-accent transition-colors py-2 px-1"
             >
               Tratamientos
             </LoadingLink>
             <LoadingLink
               href="/categorias/cursos"
-              className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+              className="text-base font-medium text-foreground hover:text-accent transition-colors py-2 px-1"
             >
               Cursos
             </LoadingLink>
@@ -80,19 +80,19 @@ export function Header() {
             <div className="flex flex-col gap-4">
               <LoadingLink
                 href="/servicios"
-                className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+                className="text-base py-3 flex items-center font-medium text-foreground hover:text-accent transition-colors"
               >
                 Servicios
               </LoadingLink>
               <LoadingLink
                 href="/#tratamientos"
-                className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+                className="text-base py-3 flex items-center font-medium text-foreground hover:text-accent transition-colors"
               >
                 Tratamientos
               </LoadingLink>
               <LoadingLink
                 href="/categorias/cursos"
-                className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+                className="text-base py-3 flex items-center font-medium text-foreground hover:text-accent transition-colors"
               >
                 Cursos
               </LoadingLink>
@@ -104,7 +104,7 @@ export function Header() {
               </LoadingLink> */}
               <LoadingLink
                 href="/#contacto"
-                className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+                className="text-base py-3 flex items-center font-medium text-foreground hover:text-accent transition-colors"
               >
                 Contacto
               </LoadingLink>

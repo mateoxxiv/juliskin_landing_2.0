@@ -13,6 +13,8 @@ interface ServiceDetailPageProps {
   }>
 }
 
+import Image from 'next/image'
+
 export async function generateMetadata({
   params,
 }: ServiceDetailPageProps): Promise<Metadata> {
@@ -50,10 +52,13 @@ export default async function ServiceDetailPage({
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
-        <img
+        <Image
           src={service.image || '/placeholder.svg'}
           alt={service.name}
-          className="w-full h-full object-cover"
+          fill
+          priority
+          className="object-cover"
+          unoptimized={service.image?.includes('ibb.co')}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
 

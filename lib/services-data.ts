@@ -62,7 +62,7 @@ export const services: Service[] = [
     category: 'Limpieza Profunda',
     categorySlug: 'faciales',
     duration: '80 min',
-    price: 198000 ,
+    price: 198000,
     image: 'https://i.ibb.co/dw1cb8Pv/limpieza-facial.jpg',
     shortDescription: 'Limpieza profunda que revitaliza e hidrata la piel',
     description:
@@ -148,7 +148,7 @@ export const services: Service[] = [
     category: 'Hidratación Intensiva',
     categorySlug: 'faciales',
     duration: '75 min',
-    price: 220000,
+    price: 230000,
     image: 'https://i.ibb.co/WN875GLV/alta-hidrataci-n.jpg',
     shortDescription: 'Tratamiento intensivo que hidrata profundamente la piel',
     description:
@@ -221,8 +221,8 @@ export const services: Service[] = [
     category: 'Exfoliación Química',
     categorySlug: 'faciales',
     duration: '60 min',
-    price: 200000,
-    image: 'https://i.ibb.co/Vctw625s/peeling-espalda.jpg',
+    price: 220000,
+    image: 'https://i.ibb.co/TBGT0Mp5/peeling-quimico.jpg',
     shortDescription:
       'Exfoliación química para mejorar pigmentaciones y luminosidad',
     description:
@@ -255,7 +255,7 @@ export const services: Service[] = [
     category: 'Estimulación de Colágeno',
     categorySlug: 'faciales',
     duration: '60 min',
-    price: 240000,
+    price: 250000,
     image: 'https://i.ibb.co/PXJHKvD/microagujamiento.jpg',
     shortDescription:
       'Estimula la producción de colágeno y mejora textura de la piel',
@@ -292,7 +292,7 @@ export const services: Service[] = [
     category: 'Bioestimulación',
     categorySlug: 'faciales',
     duration: '75 min',
-    price: 260000,
+    price: 270000,
     image: 'https://i.ibb.co/dsd4R12r/plasma.jpg',
     shortDescription:
       'Tratamiento autólogo que estimula colágeno y regenera la piel',
@@ -437,7 +437,7 @@ export const services: Service[] = [
     category: 'Tratamiento Combinado',
     categorySlug: 'faciales',
     duration: '90 min',
-    price: 250000,
+    price: 260000,
     image: 'https://i.ibb.co/mrZKL13y/hidra-hidratacion.png',
     shortDescription: 'Limpieza profunda con hidratación intensiva',
     description:
@@ -597,7 +597,7 @@ export const services: Service[] = [
     category: 'Estimulación Capilar',
     categorySlug: 'capilares',
     duration: '60 min',
-    price: 250000,
+    price: 260000,
     image: 'https://i.ibb.co/4nQsxckC/crecimiento-capilar.jpg',
     shortDescription: 'Estimula el crecimiento del cabello y previene la caída',
     description:
@@ -631,7 +631,7 @@ export const services: Service[] = [
     categorySlug: 'corporales',
     duration: '60 min',
     price: 250000,
-    image: 'https://i.ibb.co/mVfHYkcD/peeling-corporal.jpg',
+    image: 'https://i.ibb.co/Vctw625s/peeling-espalda.jpg',
     shortDescription: 'Mejora acné corporal, queratosis pilar y manchas',
     description:
       'Mejoría en acné corporal, secuelas de acné, queratosis pilar y manchas corporales. Incluye microdermoabrasión, aplicación de ácidos exfoliantes y mascarilla aclarante.',
@@ -713,7 +713,7 @@ export const services: Service[] = [
     category: 'Aclaramiento Corporal',
     categorySlug: 'corporales',
     duration: '45 min',
-    price: 200000,
+    price: 220000,
     image: 'https://i.ibb.co/35SrtG4G/aclaramiento-axilas.jpg',
     shortDescription: 'Mejora la pigmentación axilar',
     description:

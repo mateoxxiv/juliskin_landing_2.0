@@ -17,9 +17,9 @@ const Testimonials = dynamic(
 import Newsletter from '@/components/newsletter.client'
 
 export const metadata = {
-  title: 'Juliskin | Cosmetología Premium Transformadora',
+  title: 'Juliskin | Tratamientos Faciales y Corporales en Medellín, Colombia',
   description:
-    'Descubre el poder de tu piel con tratamientos faciales y corporales de alta tecnología en Juliskin. Agenda tu cita hoy para Hydrafacial, Peeling y más.',
+    'Tratamientos faciales y corporales en Medellín con tecnología avanzada. Hydrafacial, peeling y más. Agenda tu cita en Juliskin.',
   openGraph: {
     title: 'Juliskin | Transforma tu Belleza',
     description:

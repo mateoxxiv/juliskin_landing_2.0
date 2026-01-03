@@ -20,6 +20,8 @@ interface ServiceCardProps {
   service: Service
 }
 
+import Image from 'next/image'
+
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <LoadingLink
@@ -28,12 +30,13 @@ export function ServiceCard({ service }: ServiceCardProps) {
     >
       {/* Image Container */}
       <div className="relative aspect-[4/5] mb-4 overflow-hidden rounded-lg bg-secondary">
-        <img
+        <Image
           src={service.image || '/placeholder.svg'}
           alt={service.name}
+          fill
           loading="lazy"
-          referrerPolicy="no-referrer"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          unoptimized={service.image?.includes('ibb.co')}
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
 

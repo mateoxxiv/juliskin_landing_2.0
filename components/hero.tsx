@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import { WHATSAPP_URL } from '@/lib/constants'
@@ -8,17 +9,19 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center pt-16 md:pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/elegant-spa-treatment-room-with-soft-lighting.jpg"
           alt="Sala de tratamiento de spa elegante"
-          className="w-full h-full object-cover opacity-40"
+          fill
+          priority
+          className="object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
       </div>
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 md:px-6 lg:px-8 text-center">
-        <p className="text-sm md:text-base tracking-[0.3em] uppercase text-muted-foreground mb-6 md:mb-8">
+        <p className="text-base md:text-lg tracking-[0.3em] uppercase text-muted-foreground mb-6 md:mb-8">
           Experiencia Premium
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light text-foreground mb-6 md:mb-8 leading-tight text-balance">
@@ -26,7 +29,7 @@ export function Hero() {
           <br />
           {'transforma tu belleza'}
         </h1>
-        <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed text-pretty">
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed text-pretty">
           Tratamientos cosmetológicos innovadores que realzan tu belleza
           natural. Tecnología de vanguardia combinada con técnicas
           especializadas para resultados visibles y duraderos.

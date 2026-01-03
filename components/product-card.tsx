@@ -16,15 +16,20 @@ interface ProductCardProps {
   product: Product
 }
 
+import Image from 'next/image'
+
 export function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group cursor-pointer">
       {/* Image Container */}
       <div className="relative aspect-[4/5] mb-4 overflow-hidden rounded-lg bg-secondary">
-        <img
+        <Image
           src={product.image || '/placeholder.svg'}
           alt={product.name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          fill
+          loading="lazy"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          unoptimized={product.image?.includes('ibb.co')}
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
 

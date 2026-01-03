@@ -27,25 +27,28 @@ export function LoadingLink({ children, href, ...props }: LoadingLinkProps) {
     }
 
     // Si es un hash link (#), dejar que funcione normalmente
-    if (typeof href === 'string' && href.startsWith('#')) {
-      return
+    if (typeof href === 'string' && href.includes('#')) {
+      const [path, hash] = href.split('#')
+      // Si el path es vacío (enlace tipo '#seccion') o es igual al pathname actual (enlace tipo '/#seccion')
+      if (path === '' || path === '/' || path === pathname) {
+        return
+      }
     }
 
     // Si vamos a la misma página exacta, no hacemos nada (el Link manejará el scroll)
-    // Esto evita que el spinner se quede pegado porque no hay cambio de ruta
     const targetPath = href.toString()
-    const currentPath = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '')
-
-    if (targetPath === pathname || targetPath === currentPath) {
+    if (targetPath === pathname) {
       return
     }
 
     e.preventDefault()
     startLoading()
 
-    // Usamos router.push para navegar
-    // El LoadingProvider se encargará de detener el loading cuando cambie la ruta (pathname)
-    router.push(href.toString())
+    // Usamos setTimeout para dejar que la interacción (clic) se procese
+    // y luego lanzamos la navegación, mejorando el INP
+    setTimeout(() => {
+      router.push(href.toString())
+    }, 0)
   }
 
   return (

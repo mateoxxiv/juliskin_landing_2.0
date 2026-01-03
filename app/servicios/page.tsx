@@ -76,11 +76,10 @@ export default function ServiciosPage() {
 
       {/* Filters Section */}
       <section
-        className={`py-4 md:py-8 border-b border-border bg-background sticky top-16 md:top-20 z-40 shadow-sm transition-all duration-300 ${
-          isVisible
+        className={`py-4 md:py-8 border-b border-border bg-background sticky top-16 md:top-20 z-40 shadow-sm transition-all duration-300 ${isVisible
             ? 'translate-y-0 opacity-100'
             : '-translate-y-full opacity-0 pointer-events-none'
-        }`}
+          }`}
       >
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 items-center justify-between">
@@ -134,6 +133,7 @@ export default function ServiciosPage() {
       {/* Services Grid */}
       <section className="py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <h2 className="sr-only">Nuestra oferta de tratamientos</h2>
           {filteredServices.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
               {filteredServices.map((service) => (

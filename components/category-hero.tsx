@@ -4,15 +4,20 @@ interface CategoryHeroProps {
   image: string
 }
 
+import Image from 'next/image'
+
 export function CategoryHero({ title, description, image }: CategoryHeroProps) {
   return (
     <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src={image || '/placeholder.svg'}
           alt={title}
-          className="w-full h-full object-cover"
+          fill
+          priority
+          className="object-cover"
+          unoptimized={image?.includes('ibb.co')}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-background" />
       </div>
